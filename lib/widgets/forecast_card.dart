@@ -30,7 +30,7 @@ Widget forecastCard(AsyncSnapshot snapshot, int index) {
           Row(
             children: [
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding:  EdgeInsets.all(8.0),
                 child: Text(
                   '$tempMin °C',
                   style: const TextStyle(

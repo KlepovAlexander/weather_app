@@ -8,12 +8,13 @@ import '../utilities/location.dart';
 
 class WeatherApi {
   Future<WeatherForecast> fetchWeatherForecast(
-      {String? city, bool? isCity}) async {
+      {String? city,  bool? isCity}) async {
+
     Location location = Location();
     await location.getCurrentLocation();
-    Map<String, String>? parameters;
+    Map <String, String>? parameters;
 
-    if (isCity == true) {
+    if(isCity == true){
       var params = {
         'appid': Constants.WEATHER_APP_ID,
         'units': 'metric',
@@ -25,10 +26,11 @@ class WeatherApi {
         'appid': Constants.WEATHER_APP_ID,
         'units': 'metric',
         'lat': location.latitude.toString(),
-        'lon': location.longitude.toString(),
+        'lon':location.longitude.toString(),
       };
       parameters = params;
     }
+
 
     var uri = Uri.https(Constants.WEATHER_BASE_URL_DOMAIN,
         Constants.WEATHER_FORECAST_PATH, parameters);
