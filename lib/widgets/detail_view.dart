@@ -6,6 +6,7 @@ import '../utilities/forecast_util.dart';
 
 class DetailView extends StatelessWidget {
   final AsyncSnapshot<WeatherForecast> snapshot;
+
   const DetailView({Key? key, required this.snapshot}) : super(key: key);
 
   @override
@@ -18,8 +19,8 @@ class DetailView extends StatelessWidget {
       mainAxisSize: MainAxisSize.max,
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        Util.getItem(FontAwesomeIcons.temperatureEmpty,
-            pressure.round(), 'mm Hg'),
+        Util.getItem(
+            FontAwesomeIcons.temperatureEmpty, pressure.round(), 'mm Hg'),
         Util.getItem(FontAwesomeIcons.cloudRain, humidity, '%'),
         Util.getItem(FontAwesomeIcons.wind, wind.toInt(), 'm/s'),
       ],
