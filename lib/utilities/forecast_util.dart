@@ -3,7 +3,6 @@ import 'package:intl/intl.dart';
 
 class Util {
   static String getFormattedDate(DateTime dateTime) {
-    // return DateFormat('EEEE,M,D,Y').format(dateTime);
     return DateFormat('EEE, MMM d, y').format(dateTime);
   }
 
