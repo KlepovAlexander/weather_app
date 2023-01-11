@@ -5,6 +5,7 @@ import '../utilities/forecast_util.dart';
 
 class CityView extends StatelessWidget {
   final AsyncSnapshot<WeatherForecast> snapshot;
+
   const CityView({Key? key, required this.snapshot}) : super(key: key);
 
   @override
@@ -13,11 +14,11 @@ class CityView extends StatelessWidget {
     var city = snapshot.data?.city.name;
     var country = snapshot.data?.city.country;
     var formattedDate =
-        DateTime.fromMicrosecondsSinceEpoch(foreCastList![0].dt * 1000);
+        DateTime.fromMillisecondsSinceEpoch(foreCastList![0].dt * 1000);
     return Column(
       children: [
         Text(
-          '$city,$country',
+          '$city, $country',
           style: const TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 28.0,
