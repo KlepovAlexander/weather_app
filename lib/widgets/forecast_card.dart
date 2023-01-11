@@ -42,7 +42,6 @@ Widget forecastCard(AsyncSnapshot snapshot, int index) {
               Image.network(
                 icon,
                 scale: 1.2,
-                color: Colors.white,
               )
             ],
           )
